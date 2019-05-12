@@ -1,13 +1,25 @@
 package com.naomi.nasatoday;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class Details extends AppCompatActivity {
+public class Details extends Fragment {
+    TextView name,location;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_details, container, false);
+        name = (TextView) view.findViewById(R.id.Name);
+        location = (TextView) view.findViewById(R.id.Location);
+        return view;
+    }
+
+    public void change(String uname, String ulocation) {
+        name.setText(uname);
+        location.setText(ulocation);
     }
 }
