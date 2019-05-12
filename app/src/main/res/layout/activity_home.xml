@@ -2,13 +2,14 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/loginscrn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="0dp"
         android:text="Login"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -18,33 +19,33 @@
         android:id="@+id/fstTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
         android:text="Email"/>
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="0dp"
         android:ems="10"/>
     <TextView
         android:id="@+id/secTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="0dp" />
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="0dp"
         android:inputType="textPassword"
         android:ems="10" />
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="0dp"
         android:text="Login" />
     <TextView android:id="@+id/lnkRegister"
         android:layout_width="match_parent"
@@ -54,4 +55,14 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textColor="#3F51B5"/>
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="350px"
+        class="com.naomi.nasatoday.ListMenu"
+        android:id="@+id/fragment"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.naomi.nasatoday.Details"
+        android:id="@+id/fragment2"/>
 </LinearLayout>
