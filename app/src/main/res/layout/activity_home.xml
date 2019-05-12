@@ -1,68 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp">
 
     <TextView
         android:id="@+id/loginscrn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
         android:text="Login"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textSize="40dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/fstTxt"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:text="Email"/>
+        android:layout_height="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Email" />
+
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:ems="10"/>
+        android:ems="10" />
+
     <TextView
         android:id="@+id/secTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:layout_marginLeft="0dp" />
+        android:layout_marginTop="10dp"
+        android:text="Password" />
+
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:inputType="textPassword"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPassword" />
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
         android:text="Login" />
-    <TextView android:id="@+id/lnkRegister"
+
+    <TextView
+        android:id="@+id/lnkRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="New to Nasa Today? Register here"
         android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="#3F51B5"/>
+        android:text="New to Nasa Today? Register here"
+        android:textColor="#3F51B5"
+        android:textSize="40dp" />
+
     <fragment
-        android:layout_height="match_parent"
-        android:layout_width="350px"
-        class="com.naomi.nasatoday.ListMenu"
-        android:id="@+id/fragment"/>
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/fragment2"
         class="com.naomi.nasatoday.Details"
-        android:id="@+id/fragment2"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/fragment"
+        class="com.naomi.nasatoday.ListMenu"
+        android:layout_width="350px"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

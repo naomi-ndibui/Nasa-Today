@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "359375703777",
+    "firebase_url": "https://nasatoday-7846b.firebaseio.com",
+    "project_id": "nasatoday-7846b",
+    "storage_bucket": "nasatoday-7846b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359375703777:android:56744234601e4533",
+        "android_client_info": {
+          "package_name": "com.naomi.nasatoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359375703777-55j7bhg1o544tlmbul5kh493seco339j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmU_9pWgOWzzlbIrujrXk1uuPgofzUvyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359375703777-55j7bhg1o544tlmbul5kh493seco339j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -23,5 +24,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void activateLogin(View view) {
+        //when login button is clicked.
+        Log.i("tag", "activateLogin: Please write your username and password");
+
     }
 }
