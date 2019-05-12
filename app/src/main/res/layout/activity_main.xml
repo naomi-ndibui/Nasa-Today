@@ -4,22 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:background="@color/colorPrimary"
-    tools:context="com.naomi.nasatoday.MainActivity">
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="317dp"
-        android:text="Welcome to NASA Today"
+        android:layout_marginBottom="0dp"
         android:textSize="30sp"
-        android:textColor="#ffffff"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:gravity="center" />
 
 </RelativeLayout>
