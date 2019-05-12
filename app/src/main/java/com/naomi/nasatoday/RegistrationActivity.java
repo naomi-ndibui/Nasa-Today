@@ -68,7 +68,16 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Toast.makeText(RegistrationActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
 
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(RegistrationActivity.this, "Authentication failed." + task.getException(),
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            startActivity(new Intent(RegistrationActivity.this, ListMenu.class));
+                            finish();
+                        }
+                    }
+                });
             }
-        }
+        });
     }
 }
