@@ -2,6 +2,7 @@ package com.naomi.nasatoday;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -37,8 +38,11 @@ public class RegistrationActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-                Intent intent = new Intent (RegistrationActivity.this, ListMenu.class);
-                startActivity(intent);
+                ListMenu frag = new ListMenu();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.list,frag);
+                transaction.commit();
+
             }
         });
 
@@ -47,7 +51,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = Email.getText().toString().trim();
                 String password = Password.getText().toString().trim();
-                if (TextUtils.isEmpty((CharSequence) FullName)) {
+                if (FullName.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Enter name!", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -72,12 +76,24 @@ public class RegistrationActivity extends AppCompatActivity {
                             Toast.makeText(RegistrationActivity.this, "Authentication failed." + task.getException(),
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            startActivity(new Intent(RegistrationActivity.this, ListMenu.class));
-                            finish();
+                            ListMenu frag = new ListMenu();
+                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                            transaction.replace(R.id.list, frag);
+                            transaction.commit();
+
                         }
+
                     }
+
+
                 });
+
             }
         });
     }
+    public void activateLogin(View view){
+        startActivity(new Intent(this,HomeActivity.class));
+        Toast.makeText(this, "heeeeeeeeyyy", Toast.LENGTH_SHORT).show();
+    }
+
 }
