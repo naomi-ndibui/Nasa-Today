@@ -76,7 +76,19 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:onClick="activateLogin"
+        android:clickable="true"
         android:text="Already Registered? Login here"
         android:textColor="#3F51B5"
         android:textSize="20dp" />
+    <fragment
+        android:id="@+id/Location"
+        class="com.naomi.nasatoday.Details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/list"
+        class="com.naomi.nasatoday.ListMenu"
+        android:layout_width="350px"
+        android:layout_height="match_parent" />
 </LinearLayout>
