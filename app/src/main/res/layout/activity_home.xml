@@ -59,16 +59,4 @@
         android:textColor="#3F51B5"
         android:textSize="40dp" />
 
-    <fragment
-        android:id="@+id/fragment2"
-        class="com.naomi.nasatoday.Details"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <fragment
-        android:id="@+id/fragment"
-        class="com.naomi.nasatoday.ListMenu"
-        android:layout_width="350px"
-        android:layout_height="match_parent" />
-
 </LinearLayout>
