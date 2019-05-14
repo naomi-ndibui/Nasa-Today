@@ -10,7 +10,8 @@
         android:roundIcon="@drawable/nasaicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:name = ".MyCustomApplication">
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,6 +26,7 @@
                 android:value="com.naomi.nasatoday.HomeActivity" />
         </activity>
         <activity android:name=".HomeActivity" />
+
     </application>
 
 </manifest>
