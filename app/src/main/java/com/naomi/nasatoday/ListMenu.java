@@ -12,6 +12,7 @@ public class ListMenu extends ListFragment {
     String[] places = new String[] { "Earth","Stars","Planets"};
     String[] location = new String[]{"Space view","Space view","Space view"};
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.activity_list_menu, container, false);
@@ -22,7 +23,7 @@ public class ListMenu extends ListFragment {
     }
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Details txt = (Details)getFragmentManager().findFragmentById(R.id.fragment2);
+        Details txt = (Details)getFragmentManager().findFragmentById(R.id.Location);
         txt.change("Name: "+ places[position],"Location : "+ location[position]);
         getListView().setSelector(android.R.color.holo_blue_dark);
     }
