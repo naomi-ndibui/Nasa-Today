@@ -20,4 +20,5 @@
         android:layout_marginLeft="200px"
         android:textColor="#ffffff"
         android:id="@+id/Location"/>
+
 </LinearLayout>
