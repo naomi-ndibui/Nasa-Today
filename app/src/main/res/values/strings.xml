@@ -30,6 +30,10 @@
         <item>Articles</item>
     </string-array>
 
+    <string name="appbar_scrolling_view_behavior" translatable="false">
+        android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+
     <string name="action_logout">Logout</string>
 
     <!-- TODO: Remove or change this placeholder text -->
