@@ -1,4 +1,4 @@
-package com.naomi.nasatoday;
+package Activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.naomi.nasatoday.R;
 
 public class HomeActivity extends AppCompatActivity {
     private EditText Email, Password;

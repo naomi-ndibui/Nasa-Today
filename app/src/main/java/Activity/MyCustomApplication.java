@@ -1,4 +1,4 @@
-package com.naomi.nasatoday;
+package Activity;
 
 import android.app.Application;
 import android.content.res.Configuration;

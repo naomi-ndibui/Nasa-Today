@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="0dp"
-    tools:context=".RegistrationActivity">
+    tools:context="Activity.RegistrationActivity">
 
     <TextView
         android:id="@+id/loginscrn"
@@ -82,13 +82,13 @@
         android:textSize="20dp" />
     <fragment
         android:id="@+id/Location"
-        class="com.naomi.nasatoday.Details"
+        class="Activity.Details"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <fragment
         android:id="@+id/list"
-        class="com.naomi.nasatoday.ListMenu"
+        class="Activity.ListMenu"
         android:layout_width="350px"
         android:layout_height="match_parent" />
 </LinearLayout>

@@ -11,21 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
-        android:name = ".MyCustomApplication">
+        android:name = "Activity.MyCustomApplication">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity">
+        <activity android:name="Activity.RegistrationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.naomi.nasatoday.HomeActivity" />
+                android:value="com.naomi.nasatoday.Activity.HomeActivity" />
         </activity>
-        <activity android:name=".HomeActivity" />
+        <activity android:name="Activity.HomeActivity" />
 
     </application>
 

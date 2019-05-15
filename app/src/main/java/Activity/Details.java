@@ -1,4 +1,4 @@
-package com.naomi.nasatoday;
+package Activity;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.naomi.nasatoday.R;
 
 public class Details extends Fragment {
     TextView name,location;
