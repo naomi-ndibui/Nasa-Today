@@ -19,6 +19,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.naomi.nasatoday.R;
 
+import Fragment.HomeFragment;
+
 public class HomeActivity extends AppCompatActivity {
     private EditText Email, Password;
     private FirebaseAuth auth;
@@ -30,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() !=null){
-            ListMenu frag = new ListMenu();
+            HomeFragment frag = new HomeFragment();
             FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.list, frag);
             transaction.commit();
@@ -70,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
                             Toast.makeText(HomeActivity.this, getString(R.string.login_failed), Toast.LENGTH_LONG).show();
                         }
                         } else {
-                            ListMenu frag = new ListMenu();
+                            HomeFragment frag = new HomeFragment();
                             FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
                             transaction.replace(R.id.list, frag);
                             transaction.commit();

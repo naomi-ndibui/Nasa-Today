@@ -4,16 +4,16 @@
     package="com.naomi.nasatoday">
 
     <application
+        android:name="Activity.MyCustomApplication"
         android:allowBackup="false"
         android:icon="@drawable/nasaicon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/nasaicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:name = "Activity.MyCustomApplication">
-
-        <activity android:name="Activity.MainActivity">
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="Activity.MainActivity"></activity>
+        <activity android:name="Activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +26,6 @@
                 android:value="com.naomi.nasatoday.Activity.HomeActivity" />
         </activity>
         <activity android:name="Activity.HomeActivity" />
-
     </application>
 
 </manifest>
