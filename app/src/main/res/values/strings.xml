@@ -20,8 +20,7 @@
     <string name="nav_images">Images</string>
     <string name="nav_videos">Videos</string>
     <string name="nav_articles">Articles</string>
-    <string name="nav_settings">Settings</string>
-    <string name="nav_about_us">About Us</string>
+
 
     <!-- Toolbar titles when navigation menu item is selected -->
     <string-array name="nav_item_activity_titles">
@@ -29,10 +28,8 @@
         <item>Images</item>
         <item>Videos</item>
         <item>Articles</item>
-        <item>Settings</item>
     </string-array>
 
-    <string name="activity_title_about_us">About Us</string>
     <string name="action_logout">Logout</string>
 
     <!-- TODO: Remove or change this placeholder text -->
