@@ -20,8 +20,11 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String TAG = MainActivity.class.getSimpleName();
+
 
     private DrawerLayout drawer;
+    private Date date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        getSpace(date);
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -46,9 +53,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-
+    }
+    
         private void getSpace(Date date) {
-            final NasaService yelpService = new NasaService();
+            final NasaService NasaService = new NasaService();
             NasaService.findSpace(date, new Callback() {
 
                 @Override
@@ -67,6 +75,4 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
-    }
 }
