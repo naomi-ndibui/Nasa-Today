@@ -10,7 +10,7 @@ import okhttp3.Request;
 
 
 public class NasaService {
-    public static void(Date date, Boolean hd, Callback callback) {
+    public static void findSpace(Date date, Callback callback) {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();

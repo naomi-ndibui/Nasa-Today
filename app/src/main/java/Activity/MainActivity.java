@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 
 import com.naomi.nasatoday.R;
 
+import java.util.Date;
+
+import okhttp3.Callback;
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawer;
@@ -38,5 +42,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+
+        private void getSpace(Date date) {
+            final NasaService yelpService = new NasaService();
+            NasaService.findSpace(date, new Callback() {
+
+            });
+        }
+
     }
 }
