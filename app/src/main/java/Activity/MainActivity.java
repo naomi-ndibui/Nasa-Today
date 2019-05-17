@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-    
+
         private void getSpace(Date date) {
             final NasaService NasaService = new NasaService();
             NasaService.findSpace(date, new Callback() {
