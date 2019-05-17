@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'Nasa_TOKEN', NasaToken
+    }
+
 }
 
 //force all libraries to use version declared...
