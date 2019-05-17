@@ -71,13 +71,16 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    try {
-                        String jsonData = response.body().string();
-                        Log.v(TAG, jsonData);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                public void onResponse(Call call, Response response) {
+                    mspace = NasaService.processResults(response);
+
+                    MainActivity.this.runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+                        }
+
+                    });
                 }
             });
         }
