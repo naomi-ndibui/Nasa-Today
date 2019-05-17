@@ -11,8 +11,10 @@ import android.support.v7.widget.Toolbar;
 
 import com.naomi.nasatoday.R;
 
+import java.io.IOException;
 import java.util.Date;
 
+import okhttp3.Call;
 import okhttp3.Callback;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
             final NasaService yelpService = new NasaService();
             NasaService.findSpace(date, new Callback() {
 
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    e.printStackTrace();
+                }
             });
         }
 
