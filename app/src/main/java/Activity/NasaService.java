@@ -2,6 +2,7 @@ package Activity;
 
 import java.util.Date;
 
+import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -23,5 +24,7 @@ public class NasaService {
                 .header("Authorization", Constants.Nasa_Token)
                 .build();
 
+        Call call = client.newCall(request);
+        call.enqueue(callback);
     }
 }
