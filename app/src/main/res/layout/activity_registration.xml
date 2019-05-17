@@ -82,13 +82,8 @@
         android:textSize="20dp" />
     <fragment
         android:id="@+id/Location"
-        class="Activity.Details"
+        class="Activity.MainActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <fragment
-        android:id="@+id/list"
-        class="Activity.ListMenu"
-        android:layout_width="350px"
-        android:layout_height="match_parent" />
 </LinearLayout>

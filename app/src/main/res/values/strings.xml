@@ -12,30 +12,5 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="openDrawer">open_drawer</string>
-    <string name="closeDrawer">close_drawer</string>
 
-    <!-- Navigation Drawer menu labels -->
-    <string name="nav_home">Home</string>
-    <string name="nav_images">Images</string>
-    <string name="nav_videos">Videos</string>
-    <string name="nav_articles">Articles</string>
-
-
-    <!-- Toolbar titles when navigation menu item is selected -->
-    <string-array name="nav_item_activity_titles">
-        <item>Home</item>
-        <item>Images</item>
-        <item>Videos</item>
-        <item>Articles</item>
-    </string-array>
-
-    <string name="appbar_scrolling_view_behavior" translatable="false">
-        android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-
-
-    <string name="action_logout">Logout</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
