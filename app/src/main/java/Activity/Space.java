@@ -31,7 +31,7 @@ public class Space {
         return mExplanation;
     }
 
-    public String getMdate() {
+    public String getmdate() {
         return mdate;
     }
 }

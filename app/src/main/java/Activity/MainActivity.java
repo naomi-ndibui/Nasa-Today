@@ -78,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void run() {
+                            String[] spaceDate = new String[mspace.size()];
+                            for (int i = 0; i < spaceDate.length; i++) {
+                                spaceDate[i] = mspace.get(i).getmTitle();
+                            }
                         }
 
                     });
