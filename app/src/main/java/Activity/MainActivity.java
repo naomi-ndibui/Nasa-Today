@@ -8,12 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.ListView;
+import android.widget.TextView;
 
 
 import com.naomi.nasatoday.R;
 
 import java.io.IOException;
-import java.util.Date;
+import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -22,9 +24,12 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
 
-
     private DrawerLayout drawer;
-    private Date date;
+    private String date;
+
+    @BindView(R.id.dateTextView) TextView mDateTextView;
+    @BindView(R.id.listView) ListView mListView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-        private void getSpace(Date date) {
+    public ArrayList<Space> mspace = new ArrayList<>();
+        private void getSpace(String date) {
             final NasaService NasaService = new NasaService();
             NasaService.findSpace(date, new Callback() {
 

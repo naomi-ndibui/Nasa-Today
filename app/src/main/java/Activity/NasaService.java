@@ -1,5 +1,10 @@
 package Activity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import okhttp3.Call;
@@ -7,10 +12,11 @@ import okhttp3.Callback;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class NasaService {
-    public static void findSpace(Date date, Callback callback) {
+    public static void findSpace(String date, Callback callback) {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();
@@ -27,4 +33,27 @@ public class NasaService {
         Call call = client.newCall(request);
         call.enqueue(callback);
     }
-}
+
+    public ArrayList<Space> processResults(Response response) {
+        ArrayList<Space> space = new ArrayList<>();
+        try {
+            String jsonData = response.body().string();
+            JSONObject NasaJSON = new JSONObject(jsonData);
+            JSONObject view = NasaJSON.getJSONObject("view");
+            String image = view.getString("image");
+            String credits = view.getString("credits");
+            String title = view.getString("title");
+            String explanation = view.getString("explanation");
+            String date = view.getString("date");
+
+            Space space1 = new Space(image, credits, title, explanation, date);
+            space.add(space1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return space;
+    }
+
+    }

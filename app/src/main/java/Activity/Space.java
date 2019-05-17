@@ -1,15 +1,13 @@
 package Activity;
 
-import java.util.Date;
-
 public class Space {
     private String mImage;
     private String mCredits;
     private String mTitle;
     private String mExplanation;
-    private Date mdate;
+    private String mdate;
 
-    public Space(String image,String credits,String title,String explanation,Date date){
+    public Space(String image,String credits,String title,String explanation,String date){
         this.mImage = image;
         this.mCredits = credits;
         this.mTitle = title;
@@ -33,7 +31,7 @@ public class Space {
         return mExplanation;
     }
 
-    public Date getMdate() {
+    public String getMdate() {
         return mdate;
     }
 }
