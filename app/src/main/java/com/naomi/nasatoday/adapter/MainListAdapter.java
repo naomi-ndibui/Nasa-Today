@@ -1,6 +1,7 @@
-package adapters;
+package com.naomi.nasatoday.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,19 +12,29 @@ import android.widget.TextView;
 import com.naomi.nasatoday.R;
 import com.squareup.picasso.Picasso;
 
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 
-import Activity.Space;
+import com.naomi.nasatoday.Activity.MainDetailActivity;
+import com.naomi.nasatoday.Activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> {
+public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> implements View.OnClickListener{
     private ArrayList<Space> mSpace = new ArrayList<>();
     private Context mContext;
+    private Space mspace;
+    private View itemView;
 
-    public MainListAdapter(Context context, ArrayList<Space> Spaces) {
+    public  void MainListAdapter( View itemView) {
+        super(itemView);
+    }
+
+    public MainListAdapter(Context context, ArrayList<Space> Space) {
+        super(context);
         mContext = context;
-        mSpace = Spaces;
+        mSpace = Space;
     }
 
     @Override
@@ -42,6 +53,19 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
     public int getItemCount() {
         return mSpace.size();
     }
+
+
+    @Override
+    public void onClick(View v) {
+        itemView.setOnClickListener(this);
+
+        int itemPosition = getLayoutPosition();
+        Intent intent = new Intent(mContext, MainDetailActivity.class);
+        intent.putExtra("position", itemPosition);
+        intent.putExtra("space", Parcels.wrap(mspace));
+        mContext.startActivity(intent);
+    }
+
     public class MainViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.title_eventsTextView) TextView mdateTextView;
         @BindView(R.id.spaceImageView) ImageView mspaceImageView;

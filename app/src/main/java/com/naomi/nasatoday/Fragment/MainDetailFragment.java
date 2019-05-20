@@ -1,4 +1,4 @@
-package Fragment;
+package com.naomi.nasatoday.Fragment;
 
 
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import Activity.Space;
+import com.naomi.nasatoday.Activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

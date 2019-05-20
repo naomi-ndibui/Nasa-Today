@@ -1,4 +1,4 @@
-package Activity;
+package com.naomi.nasatoday.Activity;
 
 
 import android.content.Intent;
@@ -16,7 +16,7 @@ import com.naomi.nasatoday.R;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import adapters.MainListAdapter;
+import com.naomi.nasatoday.adapter.MainListAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import okhttp3.Call;

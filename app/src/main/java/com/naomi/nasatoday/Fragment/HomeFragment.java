@@ -1,4 +1,4 @@
-package Fragment;
+package com.naomi.nasatoday.Fragment;
 
 import android.content.Context;
 import android.net.Uri;

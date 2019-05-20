@@ -1,4 +1,4 @@
-package adapters;
+package com.naomi.nasatoday.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-import Activity.Space;
-import Fragment.MainDetailFragment;
+import com.naomi.nasatoday.Activity.Space;
+import com.naomi.nasatoday.Fragment.MainDetailFragment;
 
 public class MainPagerAdapter extends FragmentPagerAdapter {private ArrayList<Space> mspace;
 

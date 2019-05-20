@@ -1,4 +1,4 @@
-package Activity;
+package com.naomi.nasatoday.Activity;
 
 public class Space {
     private String mImage;
