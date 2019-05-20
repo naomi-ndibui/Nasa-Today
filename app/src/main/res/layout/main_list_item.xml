@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/titleeventsTextView"
+            android:id="@+id/title_eventsTextView"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="Title events"
@@ -29,9 +29,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="One Cuisine Type"
             android:id="@+id/categoryTextView"
-            android:layout_below="@+id/titleeventsTextView"
+            android:layout_below="@+id/title_eventsTextView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:textStyle="italic"/>
