@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import adapters.MainListAdapter;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawer;
     private String date;
 
-    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     private MainListAdapter mAdapter;
     private ArrayList<Space> mspace = new ArrayList<>();
 

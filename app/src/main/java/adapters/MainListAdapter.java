@@ -12,6 +12,8 @@ import com.naomi.nasatoday.R;
 import java.util.ArrayList;
 
 import Activity.Space;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> {
     private ArrayList<Space> mSpace = new ArrayList<>();
