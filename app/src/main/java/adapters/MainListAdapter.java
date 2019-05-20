@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.naomi.nasatoday.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -42,6 +44,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
     }
     public class MainViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.title_eventsTextView) TextView mdateTextView;
+        @BindView(R.id.spaceImageView) ImageView mspaceImageView;
 
         private Context mContext;
 
@@ -52,6 +55,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
         }
 
         public void bindMain(Space Space) {
+            Picasso.get().load(Space.getmImage()).into(mspaceImageView);
             mdateTextView.setText(Space.getmTitle());
         }
     }
