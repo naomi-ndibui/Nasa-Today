@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Space;
+
 import android.widget.TextView;
 
 import com.naomi.nasatoday.R;
@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import Activity.MainActivity;
+import Activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -26,20 +26,20 @@ public class MainDetailFragment extends Fragment {
     @BindView(R.id.ExplanationTextView) TextView mexplanationLabel;
     @BindView(R.id.dateTextView) TextView mdateLabel;
 
-    private MainActivity mMain;
+    private Space mspace;
 
     public static MainDetailFragment newInstance(Space space) {
         MainDetailFragment mainDetailFragment = new MainDetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("Space", Parcels.wrap(space));
-        MainDetailFragment.setArguments(args);
+        mainDetailFragment.setArguments(args);
         return mainDetailFragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mMain = Parcels.unwrap(getArguments().getParcelable("Space"));
+        mspace = Parcels.unwrap(getArguments().getParcelable("Space"));
     }
 
     @Override
@@ -47,12 +47,12 @@ public class MainDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main_detail, container, false);
         ButterKnife.bind(this, view);
 
-        Picasso.get().load(mMain.getmImage()).into(mImageLabel);
+        Picasso.get().load(mspace.getmImage()).into(mImageLabel);
 
-        mTitleLabel.setText(mMain.getmTitle());
-        mexplanationLabel.setText(mMain.getmExplanation());
-        mCreditsLabel.setText(mMain.getmCredits());
-        mdateLabel.setText(mMain.getmdate());
+        mTitleLabel.setText(mspace.getmTitle());
+        mexplanationLabel.setText(mspace.getmExplanation());
+        mCreditsLabel.setText(mspace.getmCredits());
+        mdateLabel.setText(mspace.getmdate());
 
         return view;
     }
