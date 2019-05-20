@@ -29,10 +29,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/categoryTextView"
-            android:layout_below="@+id/title_eventsTextView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:id="@+id/ExplanationTextView"
+            android:text="Explanation"
             android:textStyle="italic"/>
 
         <RelativeLayout
@@ -42,8 +40,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rating"
-                android:id="@+id/ratingTextView"
+                android:text="Credits"
+                android:id="@+id/creditsTextView"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"/>
