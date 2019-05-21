@@ -90,7 +90,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
     public void activateLogin(View view){
         startActivity(new Intent(this, HomeActivity.class));
-        Toast.makeText(this, "heeeeeeeeyyy", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "welcome", Toast.LENGTH_SHORT).show();
     }
 
 }
