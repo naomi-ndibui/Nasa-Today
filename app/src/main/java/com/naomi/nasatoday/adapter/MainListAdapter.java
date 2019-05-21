@@ -21,20 +21,14 @@ import com.naomi.nasatoday.Activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> implements View.OnClickListener{
-    private ArrayList<Space> mSpace = new ArrayList<>();
+public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> {
+    private ArrayList<Space> mspace = new ArrayList<>();
     private Context mContext;
-    private Space mspace;
-    private View itemView;
-
-    public  void MainListAdapter( View itemView) {
-        super(itemView);
-    }
+    private ArrayList<Space> space;
 
     public MainListAdapter(Context context, ArrayList<Space> Space) {
-        super(context);
         mContext = context;
-        mSpace = Space;
+        space = Space;
     }
 
     @Override
@@ -46,27 +40,18 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
 
     @Override
     public void onBindViewHolder(MainListAdapter.MainViewHolder holder, int position) {
-        holder.bindMain(mSpace.get(position));
+        holder.bindMain(space.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mSpace.size();
+        return space.size();
     }
 
 
-    @Override
-    public void onClick(View v) {
-        itemView.setOnClickListener(this);
 
-        int itemPosition = getLayoutPosition();
-        Intent intent = new Intent(mContext, MainDetailActivity.class);
-        intent.putExtra("position", itemPosition);
-        intent.putExtra("space", Parcels.wrap(mspace));
-        mContext.startActivity(intent);
-    }
 
-    public class MainViewHolder extends RecyclerView.ViewHolder {
+    public class MainViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         @BindView(R.id.title_eventsTextView) TextView mdateTextView;
         @BindView(R.id.spaceImageView) ImageView mspaceImageView;
 
@@ -75,12 +60,26 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
         public MainViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(this);
             mContext = itemView.getContext();
+
+
         }
 
         public void bindMain(Space Space) {
             Picasso.get().load(Space.getmImage()).into(mspaceImageView);
             mdateTextView.setText(Space.getmTitle());
+        }
+
+        @Override
+        public void onClick(View v) {
+
+
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, MainDetailActivity.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("space", Parcels.wrap(mspace));
+            mContext.startActivity(intent);
         }
     }
 }
