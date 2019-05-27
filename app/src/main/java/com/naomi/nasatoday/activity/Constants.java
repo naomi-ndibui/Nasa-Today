@@ -1,4 +1,4 @@
-package com.naomi.nasatoday.Activity;
+package com.naomi.nasatoday.activity;
 
 import com.naomi.nasatoday.BuildConfig;
 

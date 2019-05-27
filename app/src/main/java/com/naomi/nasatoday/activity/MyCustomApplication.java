@@ -1,4 +1,4 @@
-package com.naomi.nasatoday.Activity;
+package com.naomi.nasatoday.activity;
 
 import android.app.Application;
 import android.content.res.Configuration;
@@ -12,12 +12,5 @@ public class MyCustomApplication extends Application {
                 FirebaseApp.initializeApp(this);
 
     }
-    @Override
-    public void onConfigurationChanged (Configuration newConfig){
-        super.onConfigurationChanged(newConfig);
-    }
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-    }
+
 }

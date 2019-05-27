@@ -21,6 +21,9 @@ android {
         it.buildConfigField 'String', 'Nasa_TOKEN', NasaToken
     }
 
+    defaultConfig.applicationId="com.naomi.nasatoday"
+
+
 }
 
 //force all libraries to use version declared...

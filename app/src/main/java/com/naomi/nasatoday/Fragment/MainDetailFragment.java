@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import com.naomi.nasatoday.Activity.Space;
+import com.naomi.nasatoday.activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

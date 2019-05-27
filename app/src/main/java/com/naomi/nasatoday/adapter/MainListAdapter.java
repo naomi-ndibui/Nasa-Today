@@ -16,8 +16,8 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-import com.naomi.nasatoday.Activity.MainDetailActivity;
-import com.naomi.nasatoday.Activity.Space;
+import com.naomi.nasatoday.activity.MainDetailActivity;
+import com.naomi.nasatoday.activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

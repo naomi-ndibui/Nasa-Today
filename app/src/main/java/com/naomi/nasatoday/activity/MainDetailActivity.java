@@ -1,4 +1,4 @@
-package com.naomi.nasatoday.Activity;
+package com.naomi.nasatoday.activity;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
