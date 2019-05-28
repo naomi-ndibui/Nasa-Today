@@ -80,10 +80,5 @@
         android:text="Already Registered? Login here"
         android:textColor="#3F51B5"
         android:textSize="20dp" />
-    <fragment
-        android:id="@+id/Location"
-        class="com.naomi.nasatoday.activity.MainActivity"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 </LinearLayout>
