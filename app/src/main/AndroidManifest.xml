@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.MainDetailActivity"/>
+        <activity android:name=".activity.ImagesActivity"></activity>
+        <activity android:name=".activity.MainDetailActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.WelcomeActivity">
             <intent-filter>
@@ -24,7 +25,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RegistrationActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.RegistrationActivity" />
         </activity>
         <activity android:name=".activity.HomeActivity" />
     </application>
