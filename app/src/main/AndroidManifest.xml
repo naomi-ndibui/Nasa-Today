@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.ImagesActivity"></activity>
+        <activity android:name=".activity.HomeActivity"></activity>
+        <activity android:name=".activity.ImagesActivity" />
         <activity android:name=".activity.MainDetailActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.WelcomeActivity">
@@ -29,7 +30,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RegistrationActivity" />
         </activity>
-        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.LoginActivity" />
     </application>
 
 </manifest>

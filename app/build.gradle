@@ -21,7 +21,7 @@ android {
         it.buildConfigField 'String', 'Nasa_TOKEN', NasaToken
     }
 
-    defaultConfig.applicationId="com.naomi.nasatoday"
+    defaultConfig.applicationId = "com.naomi.nasatoday"
 
 
 }
