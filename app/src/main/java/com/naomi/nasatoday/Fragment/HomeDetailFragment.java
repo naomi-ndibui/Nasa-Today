@@ -19,7 +19,7 @@ import com.naomi.nasatoday.activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainDetailFragment extends Fragment {
+public class HomeDetailFragment extends Fragment {
     @BindView(R.id.spaceImageView) ImageView mImageLabel;
     @BindView(R.id.title_eventsTextView) TextView mTitleLabel;
     @BindView(R.id.creditsTextView) TextView mCreditsLabel;
@@ -28,8 +28,8 @@ public class MainDetailFragment extends Fragment {
 
     private Space mspace;
 
-    public static MainDetailFragment newInstance(Space space) {
-        MainDetailFragment mainDetailFragment = new MainDetailFragment();
+    public static HomeDetailFragment newInstance(Space space) {
+        HomeDetailFragment mainDetailFragment = new HomeDetailFragment();
         Bundle args = new Bundle();
         args.putParcelable("Space", Parcels.wrap(space));
         mainDetailFragment.setArguments(args);
@@ -44,7 +44,7 @@ public class MainDetailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main_detail, container, false);
+        View view = inflater.inflate(R.layout.fragment_home_detail, container, false);
         ButterKnife.bind(this, view);
 
         Picasso.get().load(mspace.getmImage()).into(mImageLabel);

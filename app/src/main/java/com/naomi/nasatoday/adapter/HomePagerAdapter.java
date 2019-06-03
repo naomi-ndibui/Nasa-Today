@@ -7,18 +7,18 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 
 import com.naomi.nasatoday.activity.Space;
-import com.naomi.nasatoday.Fragment.MainDetailFragment;
+import com.naomi.nasatoday.Fragment.HomeDetailFragment;
 
-public class MainPagerAdapter extends FragmentPagerAdapter {private ArrayList<Space> mspace;
+public class HomePagerAdapter extends FragmentPagerAdapter {private ArrayList<Space> mspace;
 
-    public MainPagerAdapter(FragmentManager fm, ArrayList<Space> Space) {
+    public HomePagerAdapter(FragmentManager fm, ArrayList<Space> Space) {
         super(fm);
         mspace = Space;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return MainDetailFragment.newInstance(mspace.get(position));
+        return HomeDetailFragment.newInstance(mspace.get(position));
     }
 
     @Override
