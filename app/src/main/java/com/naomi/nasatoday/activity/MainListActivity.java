@@ -3,6 +3,8 @@ package com.naomi.nasatoday.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.naomi.nasatoday.R;
+
 public class MainListActivity extends AppCompatActivity {
 
     @Override
