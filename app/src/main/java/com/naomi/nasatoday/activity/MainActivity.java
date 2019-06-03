@@ -15,9 +15,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.naomi.nasatoday.R;
 
 import java.io.IOException;
@@ -34,8 +39,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static final String TAG = MainActivity.class.getSimpleName();
 
     private DrawerLayout drawer;
-    private TextView NasaTodayTextView;
-    private String date;
+
+    private DatabaseReference SearchedDateReference;
+
+    @BindView(R.id.spaceButton) Button SpaceButton;
+    @BindView(R.id.dateEditText) EditText DateEditText;
+    @BindView(R.id.NasaTodayTextView) TextView NasaTodayTextView;
+
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     private MainListAdapter mAdapter;
@@ -43,6 +53,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        SearchedDateReference = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(Constants.FIREBASE_CHILD_SEARCHED_Date);
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -65,6 +82,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String date = intent.getStringExtra("date");
         getSpace(date);
 
+        DateButton.setOnClickListener(this);
+
+    }
+
+    public void onClick(View v) {
+        if (v == SpaceButton) {
+            String date = DateEditText.getText().toString();
+
+            saveDateToFirebase(location);
+
+            Intent intent = new Intent(MainActivity.this, MainListActivity.class);
+            intent.putExtra("date", date);
+            startActivity(intent);
+        }
     }
 
     @Override
