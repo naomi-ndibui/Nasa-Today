@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.MainListActivity"></activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.ImagesActivity" />
         <activity android:name=".activity.MainDetailActivity" />

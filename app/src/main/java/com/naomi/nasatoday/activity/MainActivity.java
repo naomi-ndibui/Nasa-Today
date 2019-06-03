@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             saveDateToFirebase(date);
 
-            Intent intent = new Intent(MainActivity.this, MainListActivity.class);
+            Intent intent = getIntent();
             intent.putExtra("date", date);
             startActivity(intent);
         }
