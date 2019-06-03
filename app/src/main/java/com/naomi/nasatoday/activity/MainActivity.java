@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SearchedDateReference = FirebaseDatabase
                 .getInstance()
                 .getReference()
-                .child(Constants.FIREBASE_CHILD_SEARCHED_Date);
+                .child(Constants.FIREBASE_CHILD_SEARCHED_DATE);
 
 
         super.onCreate(savedInstanceState);
@@ -90,12 +90,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (v == SpaceButton) {
             String date = DateEditText.getText().toString();
 
-            saveDateToFirebase(location);
+            saveDateToFirebase(date);
 
             Intent intent = new Intent(MainActivity.this, MainListActivity.class);
             intent.putExtra("date", date);
             startActivity(intent);
         }
+    }
+
+    public void saveDateToFirebase(String date) {
+        SearchedDateReference.push().setValue(date);
     }
 
     @Override
