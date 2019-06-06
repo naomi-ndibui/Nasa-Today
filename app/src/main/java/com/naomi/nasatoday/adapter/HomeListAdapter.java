@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.naomi.nasatoday.R;
-import com.naomi.nasatoday.activity.HomeDetailActivity;
+import com.naomi.nasatoday.activity.SpaceDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -76,7 +76,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.MainVi
 
 
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, HomeDetailActivity.class);
+            Intent intent = new Intent(mContext, SpaceDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("space", Parcels.wrap(mspace));
             mContext.startActivity(intent);

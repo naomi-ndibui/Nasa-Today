@@ -14,7 +14,7 @@ import com.naomi.nasatoday.adapter.HomePagerAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeDetailActivity extends AppCompatActivity {
+public class SpaceDetailActivity extends AppCompatActivity {
 
     @BindView(R.id.viewPager) ViewPager mViewPager;
     private HomePagerAdapter adapterViewPager;
@@ -23,7 +23,7 @@ public class HomeDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_detail);
+        setContentView(R.layout.activity_space_detail);
         ButterKnife.bind(this);
 
         mspace = Parcels.unwrap(getIntent().getParcelableExtra("space"));

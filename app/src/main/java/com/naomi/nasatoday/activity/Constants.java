@@ -8,5 +8,6 @@ public class Constants {
     public static final String Nasa_date_QUERY_PARAMETER = "date";
 
     public static final String FIREBASE_CHILD_SEARCHED_DATE = "searchedDATE";
+    public static final String FIREBASE_CHILD_Date = "date";
 
 }
