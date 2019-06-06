@@ -10,26 +10,26 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-import com.naomi.nasatoday.adapter.MainPagerAdapter;
+import com.naomi.nasatoday.adapter.HomePagerAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainDetailActivity extends AppCompatActivity {
+public class SpaceDetailActivity extends AppCompatActivity {
 
     @BindView(R.id.viewPager) ViewPager mViewPager;
-    private MainPagerAdapter adapterViewPager;
+    private HomePagerAdapter adapterViewPager;
     ArrayList<Space> mspace = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_detail);
+        setContentView(R.layout.activity_space_detail);
         ButterKnife.bind(this);
 
         mspace = Parcels.unwrap(getIntent().getParcelableExtra("space"));
         int startingPosition = getIntent().getIntExtra("position", 0);
 
-        adapterViewPager = new MainPagerAdapter(getSupportFragmentManager(), mspace);
+        adapterViewPager = new HomePagerAdapter(getSupportFragmentManager(), mspace);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
     }

@@ -14,9 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.SavedHomeActivity"></activity>
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.ImagesActivity" />
-        <activity android:name=".activity.MainDetailActivity" />
+        <activity android:name=".activity.SpaceDetailActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.WelcomeActivity">
             <intent-filter>

@@ -10,36 +10,36 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.naomi.nasatoday.R;
+import com.naomi.nasatoday.activity.SpaceDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-import com.naomi.nasatoday.activity.MainDetailActivity;
 import com.naomi.nasatoday.activity.Space;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainViewHolder> {
+public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.MainViewHolder> {
     private ArrayList<Space> mspace = new ArrayList<>();
     private Context mContext;
     private ArrayList<Space> space;
 
-    public MainListAdapter(Context context, ArrayList<Space> Space) {
+    public HomeListAdapter(Context context, ArrayList<Space> Space) {
         mContext = context;
         space = Space;
     }
 
     @Override
-    public MainListAdapter.MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_list_item, parent, false);
+    public HomeListAdapter.MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_list_item, parent, false);
         MainViewHolder viewHolder = new MainViewHolder(view);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(MainListAdapter.MainViewHolder holder, int position) {
+    public void onBindViewHolder(HomeListAdapter.MainViewHolder holder, int position) {
         holder.bindMain(space.get(position));
     }
 
@@ -76,7 +76,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainVi
 
 
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, MainDetailActivity.class);
+            Intent intent = new Intent(mContext, SpaceDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("space", Parcels.wrap(mspace));
             mContext.startActivity(intent);
