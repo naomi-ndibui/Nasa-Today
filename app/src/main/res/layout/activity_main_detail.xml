@@ -10,14 +10,16 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <android.support.v4.view.PagerTabStrip
             android:id="@+id/pagerHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:paddingTop="6dp"
+            android:paddingTop="60dp"
             android:paddingBottom="6dp" />
 
     </android.support.v4.view.ViewPager>
