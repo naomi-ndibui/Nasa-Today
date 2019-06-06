@@ -2,6 +2,7 @@ package com.naomi.nasatoday.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -29,10 +30,18 @@ public class FirebaseHomeListAdapter extends FirebaseRecyclerAdapter<Space, Fire
         mContext = context;
     }
     @Override
-    protected void onBindViewHolder( FirebaseSpaceViewHolder firebaseSpaceViewHolder, int position, Space space) {
-        firebaseSpaceViewHolder.bindSpace(space);
+    protected void onBindViewHolder(final FirebaseSpaceViewHolder viewHolder, Space model, int position) {
+        viewHolder.bindSpace(model);
+        viewHolder.spaceImageView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
+                    mOnStartDragListener.onStartDrag(viewHolder);
+                }
+                return false;
+            }
+        });
     }
-
     @Override
     public FirebaseSpaceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_list_item, parent, false);

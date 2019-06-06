@@ -22,22 +22,25 @@ import java.util.ArrayList;
 
 public class FirebaseSpaceViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    View mView;
-    Context mContext;
+    View View;
+    Context Context;
+
+    public ImageView SpaceImageView;
+
 
     public FirebaseSpaceViewHolder(View itemView) {
         super(itemView);
-        mView = itemView;
-        mContext = itemView.getContext();
+        View = itemView;
+        Context = itemView.getContext();
         itemView.setOnClickListener(this);
     }
 
     public void bindSpace(Space space) {
-        ImageView spaceImageView = (ImageView) mView.findViewById(R.id.spaceImageView);
-        TextView titleTextView = (TextView) mView.findViewById(R.id.spaceTitleTextView);
-        TextView dateTextView = (TextView) mView.findViewById(R.id.dateTextView);
+        SpaceImageView = (ImageView) View.findViewById(R.id.spaceImageView);
+        TextView titleTextView = (TextView) View.findViewById(R.id.titleTextView);
+        TextView dateTextView = (TextView) View.findViewById(R.id.dateTextView);
 
-        Picasso.get().load(space.getmImage()).into(spaceImageView);
+        Picasso.get().load(space.getmImage()).into(SpaceImageView);
 
         titleTextView.setText(space.getmTitle());
         dateTextView.setText(space.getmTitle());
@@ -57,11 +60,11 @@ public class FirebaseSpaceViewHolder extends RecyclerView.ViewHolder implements 
 
                 int itemPosition = getLayoutPosition();
 
-                Intent intent = new Intent(mContext, SpaceDetailActivity.class);
+                Intent intent = new Intent(Context, SpaceDetailActivity.class);
                 intent.putExtra("position", itemPosition + "");
                 intent.putExtra("spaces", Parcels.wrap(spaces));
 
-                mContext.startActivity(intent);
+                Context.startActivity(intent);
             }
 
             @Override

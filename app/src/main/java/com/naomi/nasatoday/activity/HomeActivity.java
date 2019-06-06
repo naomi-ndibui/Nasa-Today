@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,7 +20,6 @@ import com.naomi.nasatoday.adapter.HomeListAdapter;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,8 +35,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @BindView(R.id.button) Button Button;
-    @BindView(R.id.dateEditText) EditText DateEditText;
-
+    @BindView(R.id.dateTextView) EditText DateEditText;
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     private HomeListAdapter mAdapter;
