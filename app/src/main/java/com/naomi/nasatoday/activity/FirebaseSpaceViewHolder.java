@@ -32,7 +32,7 @@ public class FirebaseSpaceViewHolder extends RecyclerView.ViewHolder implements 
         itemView.setOnClickListener(this);
     }
 
-    public void bindRestaurant(Space space) {
+    public void bindSpace(Space space) {
         ImageView spaceImageView = (ImageView) mView.findViewById(R.id.spaceImageView);
         TextView titleTextView = (TextView) mView.findViewById(R.id.spaceTitleTextView);
         TextView dateTextView = (TextView) mView.findViewById(R.id.dateTextView);
